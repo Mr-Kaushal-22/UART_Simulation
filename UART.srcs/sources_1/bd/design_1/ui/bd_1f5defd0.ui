@@ -1,0 +1,29 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.23837",
+   "Default View_TopLeft":"-134,-49",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_clock -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace port port-id_Tx_DV -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_Tx_Active -pg 1 -lvl 3 -x 600 -y 20 -defaultsOSRD
+preplace port port-id_Tx_Done -pg 1 -lvl 3 -x 600 -y 160 -defaultsOSRD
+preplace port port-id_Rx_DV -pg 1 -lvl 3 -x 600 -y 70 -defaultsOSRD
+preplace portBus Tx_Byte -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
+preplace portBus Rx_Byte -pg 1 -lvl 3 -x 600 -y 100 -defaultsOSRD
+preplace inst uart_rx_0 -pg 1 -lvl 2 -x 440 -y 90 -defaultsOSRD
+preplace inst uart_tx_0 -pg 1 -lvl 1 -x 150 -y 100 -defaultsOSRD
+preplace netloc Tx_Byte_1 1 0 1 NJ 120
+preplace netloc Tx_DV_1 1 0 1 10J 90n
+preplace netloc r_clock_1 1 0 2 20 20 280
+preplace netloc uart_rx_0_o_Rx_Byte 1 2 1 NJ 100
+preplace netloc uart_rx_0_o_Rx_DV 1 2 1 570J 70n
+preplace netloc uart_tx_0_o_Tx_Active 1 1 2 290J 20 NJ
+preplace netloc uart_tx_0_o_Tx_Done 1 1 2 290J 160 NJ
+preplace netloc uart_tx_0_o_Tx_Serial 1 1 1 N 100
+levelinfo -pg 1 -10 150 440 600
+pagesize -pg 1 -db -bbox -sgen -150 0 740 180
+"
+}
+0

@@ -1,0 +1,170 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8C6AA13256CEFDE7",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../UART.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "uart_rx_0": "",
+      "uart_tx_0": ""
+    },
+    "ports": {
+      "clock": {
+        "direction": "I"
+      },
+      "Tx_DV": {
+        "direction": "I"
+      },
+      "Tx_Byte": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "Tx_Active": {
+        "direction": "O"
+      },
+      "Tx_Done": {
+        "direction": "O"
+      },
+      "Rx_DV": {
+        "direction": "O"
+      },
+      "Rx_Byte": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "uart_rx_0": {
+        "vlnv": "xilinx.com:module_ref:uart_rx:1.0",
+        "xci_name": "design_1_uart_rx_0_0",
+        "xci_path": "ip\\design_1_uart_rx_0_0\\design_1_uart_rx_0_0.xci",
+        "inst_hier_path": "uart_rx_0",
+        "parameters": {
+          "CLKS_PER_BIT": {
+            "value": "87"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_rx",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Rx_Serial": {
+            "direction": "I"
+          },
+          "o_Rx_DV": {
+            "direction": "O"
+          },
+          "o_Rx_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "uart_tx_0": {
+        "vlnv": "xilinx.com:module_ref:uart_tx:1.0",
+        "xci_name": "design_1_uart_tx_0_0",
+        "xci_path": "ip\\design_1_uart_tx_0_0\\design_1_uart_tx_0_0.xci",
+        "inst_hier_path": "uart_tx_0",
+        "parameters": {
+          "CLKS_PER_BIT": {
+            "value": "87"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "uart_tx",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_Tx_DV": {
+            "direction": "I"
+          },
+          "i_Tx_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_Tx_Active": {
+            "direction": "O"
+          },
+          "o_Tx_Serial": {
+            "direction": "O"
+          },
+          "o_Tx_Done": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Tx_Byte_1": {
+        "ports": [
+          "Tx_Byte",
+          "uart_tx_0/i_Tx_Byte"
+        ]
+      },
+      "Tx_DV_1": {
+        "ports": [
+          "Tx_DV",
+          "uart_tx_0/i_Tx_DV"
+        ]
+      },
+      "r_clock_1": {
+        "ports": [
+          "clock",
+          "uart_rx_0/i_Clock",
+          "uart_tx_0/i_Clock"
+        ]
+      },
+      "uart_rx_0_o_Rx_Byte": {
+        "ports": [
+          "uart_rx_0/o_Rx_Byte",
+          "Rx_Byte"
+        ]
+      },
+      "uart_rx_0_o_Rx_DV": {
+        "ports": [
+          "uart_rx_0/o_Rx_DV",
+          "Rx_DV"
+        ]
+      },
+      "uart_tx_0_o_Tx_Active": {
+        "ports": [
+          "uart_tx_0/o_Tx_Active",
+          "Tx_Active"
+        ]
+      },
+      "uart_tx_0_o_Tx_Done": {
+        "ports": [
+          "uart_tx_0/o_Tx_Done",
+          "Tx_Done"
+        ]
+      },
+      "uart_tx_0_o_Tx_Serial": {
+        "ports": [
+          "uart_tx_0/o_Tx_Serial",
+          "uart_rx_0/i_Rx_Serial"
+        ]
+      }
+    }
+  }
+}

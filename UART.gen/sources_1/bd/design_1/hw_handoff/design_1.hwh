@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Feb  6 16:02:12 2024" VIVADOVERSION="2023.1">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clock" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_rx_0" PORT="i_Clock"/>
+        <CONNECTION INSTANCE="uart_tx_0" PORT="i_Clock"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Tx_DV" SIGIS="undef" SIGNAME="External_Ports_Tx_DV">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_tx_0" PORT="i_Tx_DV"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="Tx_Byte" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Tx_Byte">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_tx_0" PORT="i_Tx_Byte"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Tx_Active" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Active">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_tx_0" PORT="o_Tx_Active"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Tx_Done" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Done">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_tx_0" PORT="o_Tx_Done"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Rx_DV" SIGIS="undef" SIGNAME="uart_rx_0_o_Rx_DV">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_rx_0" PORT="o_Rx_DV"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="Rx_Byte" RIGHT="0" SIGIS="undef" SIGNAME="uart_rx_0_o_Rx_Byte">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_rx_0" PORT="o_Rx_Byte"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/uart_rx_0" HWVERSION="1.0" INSTANCE="uart_rx_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="uart_rx" VLNV="xilinx.com:module_ref:uart_rx:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CLKS_PER_BIT" VALUE="87"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_uart_rx_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Rx_Serial" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uart_tx_0" PORT="o_Tx_Serial"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Rx_DV" SIGIS="undef" SIGNAME="uart_rx_0_o_Rx_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Rx_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="o_Rx_Byte" RIGHT="0" SIGIS="undef" SIGNAME="uart_rx_0_o_Rx_Byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Rx_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/uart_tx_0" HWVERSION="1.0" INSTANCE="uart_tx_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="uart_tx" VLNV="xilinx.com:module_ref:uart_tx:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CLKS_PER_BIT" VALUE="87"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_uart_tx_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="i_Clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="i_Tx_DV" SIGIS="undef" SIGNAME="External_Ports_Tx_DV">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Tx_DV"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="i_Tx_Byte" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Tx_Byte">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Tx_Byte"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Tx_Active" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Active">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Tx_Active"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Tx_Serial" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Serial">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="uart_rx_0" PORT="i_Rx_Serial"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="o_Tx_Done" SIGIS="undef" SIGNAME="uart_tx_0_o_Tx_Done">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Tx_Done"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../UART.srcs/sources_1/new/uart_rx.v" \
+"../../../../UART.srcs/sources_1/new/uart_tx.v" \
+"../../../../UART.ip_user_files/bd/design_1/ip/design_1_uart_rx_0_0/sim/design_1_uart_rx_0_0.v" \
+"../../../../UART.ip_user_files/bd/design_1/ip/design_1_uart_tx_0_0/sim/design_1_uart_tx_0_0.v" \
+"../../../../UART.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../UART.srcs/sim_1/new/TESTBENCH.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

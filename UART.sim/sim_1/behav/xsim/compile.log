@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.srcs/sources_1/new/uart_rx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.srcs/sources_1/new/uart_tx.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.ip_user_files/bd/design_1/ip/design_1_uart_rx_0_0/sim/design_1_uart_rx_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_uart_rx_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.ip_user_files/bd/design_1/ip/design_1_uart_tx_0_0/sim/design_1_uart_tx_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_uart_tx_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.srcs/sim_1/new/TESTBENCH.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TESTBENCH
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Study/Core_Electronics/Projects/UART - Copy/UART.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
